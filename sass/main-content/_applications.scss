@@ -1,0 +1,160 @@
+.applications {
+    margin-bottom: 50px;
+    padding: 0 20px;
+
+    .wrapper {
+        .col-1 {
+            .row-1 {
+                .common-heading {
+                    margin-bottom: 25px;
+                }
+            }
+
+            .row-2 {
+                .desc {
+                    text-align: center;
+                    font-size: 16px;
+                    line-height: 18px;
+                    font-family: $barlow;
+                    color: $para;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                }
+
+                .point {
+                    ul {
+                        margin: 0;
+                        padding-left: 20px;
+
+                        li {
+                            text-align: left;
+                            font-size: 16px;
+                            line-height: 18px;
+                            font-family: $barlow;
+                            color: $para;
+                            font-weight: 400;
+                            list-style: none;
+                            position: relative;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                background-image: url('../assets/section-2/arr2.png');
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                width: 12px;
+                                height: 8px;
+                                left: -20px;
+                                top: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .col-2 {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .applications {
+        .wrapper {
+            .col-2 {
+                .image {
+                    width: 60%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    .applications {
+        margin-bottom: get-vw(100px);
+        padding: 0 get-vw(160px);
+
+        .wrapper {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            position: relative;
+            box-shadow: 0 get-vw(44px) get-vw(98px) 0 rgba(0, 0, 0, .1);
+            border: 1px solid rgba($para, 0.3);
+            background: $white;
+            padding: get-vw(70px);
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                right: get-vw(50px);
+                top: get-vw(-50px);
+                background: $bg;
+                z-index: -1;
+            }
+
+            .col-1 {
+                width: get-vw(850px);
+
+                .row-1 {
+                    .common-heading {
+                        margin-bottom: get-vw(25px);
+                        width: get-vw(500px);
+                    }
+                }
+
+                .row-2 {
+                    .desc {
+                        text-align: left;
+                        font-size: get-vw(18px);
+                        line-height: get-vw(20px);
+                        margin-bottom: get-vw(30px);
+                        width: get-vw(760px);
+                    }
+
+                    .point {
+                        width: get-vw(600px);
+
+                        ul {
+                            margin: 0;
+                            padding-left: get-vw(20px);
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            gap: get-vw(10px) get-vw(50px);
+
+                            li {
+                                width: calc(50% - get-vw(25px));
+                                font-size: get-vw(18px);
+                                line-height: get-vw(20px);
+
+                                &::after {
+                                    width: get-vw(12px);
+                                    height: get-vw(8px);
+                                    left: get-vw(-20px);
+                                    top: get-vw(8px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .col-2 {
+                width: calc(100% - get-vw(950px));
+                margin-top: 0;
+
+                .image {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

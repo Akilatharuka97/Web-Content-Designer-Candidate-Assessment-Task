@@ -1,0 +1,240 @@
+.youtube {
+    margin-bottom: 50px;
+
+    .wrapper {
+        .col-1 {
+            padding: 0 20px 30px;
+
+            .left {
+                .common-description {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .right {
+                a {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    font-family: $noto;
+                    font-size: 16px;
+                    width: fit-content;
+                    line-height: 20px;
+                    text-decoration: none;
+                    color: $black;
+                    gap: 15px;
+                    padding: 8px 20px;
+                    border: 1px solid rgba($blue, 0.3);
+                    border-radius: 50px;
+                    z-index: 2;
+                    overflow: hidden;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .col-2 {
+            .yt-slider {
+                .owl-stage-outer {
+                    .owl-stage {
+                        .owl-item {
+                            .item {
+                                .top {
+                                    position: relative;
+
+                                    .play-btn-wrapper {
+                                        position: absolute;
+                                        left: 0;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        right: 0;
+                                        margin: 0 auto;
+                                        z-index: 1;
+
+                                        .play-video {
+                                            display: flex;
+                                            justify-content: center;
+
+                                            .icon {
+                                                svg {
+                                                    width: 100px;
+                                                    height: 100px;
+                                                    fill: $bg;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .image {
+                                        position: relative;
+                                        border-radius: 5px;
+
+                                        &::after {
+                                            content: '';
+                                            position: absolute;
+                                            left: 0;
+                                            bottom: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            border-radius: 5px;
+                                            background: rgba($black, 0.3);
+                                        }
+
+                                        img {
+                                            border-radius: 5px;
+                                        }
+                                    }
+                                }
+
+                                .caption {
+                                    text-align: center;
+                                    font-style: italic;
+                                    font-size: 14px;
+                                    line-height: 18px;
+                                    font-family: $barlow;
+                                    color: $para;
+                                    font-weight: 400;
+                                    padding-top: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    .youtube {
+        margin-bottom: get-vw(100px);
+
+        .wrapper {
+            padding: 0 get-vw(160px);
+
+            .col-1 {
+                padding: 0 0 get-vw(50px);
+                display: flex;
+                justify-content: space-between;
+
+                .left {
+                    .common-heading {
+                        margin-bottom: get-vw(10px);
+                    }
+
+                    .common-description {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .right {
+                    a {
+                        font-size: get-vw(20px);
+                        line-height: get-vw(20px);
+                        gap: get-vw(15px);
+                        padding: get-vw(12px) get-vw(40px);
+                        border-radius: get-vw(50px);
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: -50%;
+                            left: -50%;
+                            width: 200%;
+                            height: 200%;
+                            background: linear-gradient(0deg, transparent, transparent 30%, rgba(0, 255, 255, 0.3));
+                            transform: rotate(-45deg);
+                            transition: all 0.5s ease;
+                            opacity: 0;
+                        }
+
+                        &:hover {
+                            &::before {
+                                opacity: 1;
+                                transform: rotate(-45deg) translateY(100%);
+                                left: get-vw(-40px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .col-2 {
+                .yt-slider {
+                    .owl-stage-outer {
+                        .owl-stage {
+                            .owl-item {
+                                .item {
+                                    .top {
+                                        .play-btn-wrapper {
+                                            .play-video {
+                                                .icon {
+                                                    svg {
+                                                        width: get-vw(100px);
+                                                        height: get-vw(100px);
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .image {
+                                            border-radius: get-vw(5px);
+
+                                            &::after {
+                                                border-radius: get-vw(5px);
+                                            }
+
+                                            img {
+                                                border-radius: get-vw(5px);
+                                            }
+                                        }
+                                    }
+
+                                    .caption {
+                                        font-size: get-vw(16px);
+                                        line-height: get-vw(18px);
+                                        padding-top: get-vw(15px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .owl-nav {
+                        display: flex;
+                        position: absolute;
+                        right: get-vw(-110px);
+                        bottom: 0;
+                        top: 0;
+                        gap: get-vw(20px);
+                        justify-content: center;
+                        width: get-vw(50px);
+                        z-index: 1;
+                        align-content: flex-end;
+                        flex-wrap: wrap;
+                        flex-direction: column-reverse;
+
+                        .owl-prev,
+                        .owl-next {
+                            &.disabled {
+                                svg {
+                                    fill: rgba($black, 0.4);
+                                }
+                            }
+
+                            svg {
+                                width: get-vw(58px);
+                                height: get-vw(58px);
+                                fill: $black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

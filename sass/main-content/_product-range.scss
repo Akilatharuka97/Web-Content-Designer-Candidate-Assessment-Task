@@ -1,0 +1,254 @@
+.product-range {
+    margin-bottom: 50px;
+
+    .wrapper {
+        .col-1 {
+            .common-heading {
+                margin-bottom: 35px;
+            }
+        }
+
+        .col-2 {
+            .tabs {
+                padding: 0;
+                margin: 0;
+                display: flex;
+                overflow-y: auto;
+                white-space: nowrap;
+                gap: 20px;
+                padding-bottom: 10px;
+                margin: 0 20px 30px;
+
+                &::-webkit-scrollbar {
+                    height: 3px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: $white;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: $blue;
+                }
+
+                &::-webkit-scrollbar-thumb:hover {
+                    background: $blue;
+                }
+
+                .tab-item {
+                    font-family: $noto;
+                    font-size: 20px;
+                    line-height: 25px;
+                    color: rgba($black, 0.5);
+                    cursor: pointer;
+                    transition: all 0.5s ease;
+
+                    &.active {
+                        color: $blue;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .sliders {
+                .content-items {
+                    .owl-stage-outer {
+                        .owl-stage {
+                            display: flex;
+                            padding-left: 20px !important;
+
+                            .owl-item {
+                                border: 1px solid rgba($black, 0.2);
+                                border-radius: 5px;
+
+                                .item {
+                                    .image {
+                                        img {
+                                            border-radius: 5px 5px 0 0;
+                                        }
+                                    }
+
+                                    .cont {
+                                        padding: 30px 20px;
+
+                                        .title {
+                                            font-family: $noto;
+                                            text-align: center;
+                                            font-size: 20px;
+                                            line-height: 25px;
+                                            color: $blue;
+                                            margin-bottom: 20px;
+                                        }
+
+                                        .desc {
+                                            text-align: center;
+                                            font-size: 16px;
+                                            line-height: 18px;
+                                            font-family: $barlow;
+                                            color: $para;
+                                            font-weight: 400;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .product-range {
+        .wrapper {
+            .col-2 {
+                .tabs {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    .product-range {
+        margin-bottom: get-vw(150px);
+
+        .wrapper {
+            padding: 0 get-vw(160px);
+
+            .col-1 {
+                .common-heading {
+                    text-align: center;
+                    margin-bottom: get-vw(50px);
+                }
+            }
+
+            .col-2 {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .tabs {
+                    display: flex;
+                    flex-direction: column;
+                    overflow-y: hidden;
+                    white-space: unset;
+                    gap: get-vw(30px);
+                    padding-bottom: 0;
+                    margin: 0;
+                    width: get-vw(500px);
+                    padding-left: get-vw(50px);
+                    border-left: get-vw(2px) solid $blue;
+
+                    .tab-item {
+                        font-family: $noto;
+                        font-size: get-vw(35px);
+                        line-height: get-vw(50px);
+                        color: rgba($black, 0.5);
+                        position: relative;
+
+                        &.active {
+                            color: $blue;
+                            font-weight: 600;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                left: get-vw(-60px);
+                                top: 50%;
+                                transform: translateY(-50%) rotate(45deg);
+                                width: get-vw(20px);
+                                height: get-vw(20px);
+                                background: $blue;
+                            }
+                        }
+                    }
+                }
+
+                .sliders {
+                    width: calc(100% - get-vw(600px));
+
+                    .content-items {
+                        .owl-stage-outer {
+                            margin-right: 1px;
+
+                            .owl-stage {
+                                display: flex;
+                                padding-left: 0 !important;
+
+                                .owl-item {
+                                    border: 1px solid rgba($black, 0.2);
+                                    border-radius: get-vw(5px);
+
+                                    .item {
+                                        display: flex;
+
+                                        .image {
+                                            width: get-vw(450px);
+
+                                            img {
+                                                border-radius: get-vw(5px) 0 0 get-vw(5px);
+                                            }
+                                        }
+
+                                        .cont {
+                                            width: calc(100% - get-vw(450px));
+                                            padding: get-vw(30px) get-vw(20px);
+
+                                            .title {
+                                                text-align: left;
+                                                font-size: get-vw(30px);
+                                                line-height: get-vw(30px);
+                                                margin-bottom: get-vw(35px);
+                                            }
+
+                                            .desc {
+                                                text-align: left;
+                                                font-size: get-vw(18px);
+                                                line-height: get-vw(20px);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .owl-nav {
+                            display: flex;
+                            position: absolute;
+                            right: get-vw(-110px);
+                            bottom: 0;
+                            top: 0;
+                            gap: get-vw(20px);
+                            justify-content: center;
+                            width: get-vw(50px);
+                            z-index: 1;
+                            align-content: flex-end;
+                            flex-wrap: wrap;
+                            flex-direction: column-reverse;
+
+                            .owl-prev,
+                            .owl-next {
+                                &.disabled {
+                                    svg {
+                                        fill: rgba($black, 0.4);
+                                    }
+                                }
+
+                                svg {
+                                    width: get-vw(58px);
+                                    height: get-vw(58px);
+                                    fill: $black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

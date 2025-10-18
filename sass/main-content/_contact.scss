@@ -1,0 +1,158 @@
+.contact {
+    margin-bottom: 50px;
+
+    .wrapper {
+
+        .col-1 {
+            margin-bottom: 50px;
+        }
+
+        .col-2 {
+
+            .contact-form {
+                background: #fff;
+                border-radius: 12px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                padding: 40px;
+
+                .form-row {
+
+                    .form-group {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 20px;
+
+                        label {
+                            font-weight: 600;
+                            margin-bottom: 8px;
+                            color: #333;
+                            font-size: 14px;
+                            font-family: $noto;
+                        }
+
+                        input,
+                        select {
+                            padding: 12px 15px;
+                            border: 1px solid #ccc;
+                            border-radius: 6px;
+                            font-size: 15px;
+                            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+                            &:focus {
+                                border-color: #007bff;
+                                box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+                                outline: none;
+                            }
+                        }
+                    }
+                }
+
+                .form-checkbox {
+                    margin-bottom: 15px;
+
+                    label {
+                        font-size: 14px;
+                        color: #444;
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 10px;
+                        font-family: $barlow;
+
+                        input[type="checkbox"] {
+                            accent-color: #007bff;
+                            transform: scale(1.2);
+                            margin-top: 3px;
+                            font-family: $barlow;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    .contact {
+        margin-bottom: get-vw(100px);
+
+        .wrapper {
+            padding: 0 get-vw(160px);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .col-1 {
+                width: get-vw(650px);
+                margin-bottom: 0;
+            }
+
+            .col-2 {
+                width: calc(100% - get-vw(750px));
+
+                .contact-form {
+                    background: #fff;
+                    border-radius: get-vw(12px);
+                    box-shadow: 0 get-vw(4px) get-vw(20px) rgba(0, 0, 0, 0.08);
+                    padding: get-vw(40px);
+
+                    .form-row {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .form-group {
+                            width: calc(50% - get-vw(20px));
+                            display: flex;
+                            flex-direction: column;
+                            margin-bottom: get-vw(20px);
+
+                            label {
+                                font-weight: 600;
+                                margin-bottom: get-vw(8px);
+                                color: #333;
+                                font-size: get-vw(14px);
+                                font-family: $noto;
+                            }
+
+                            input,
+                            select {
+                                padding: get-vw(12px) get-vw(15px);
+                                border: 1px solid #ccc;
+                                border-radius: get-vw(6px);
+                                font-size: get-vw(15px);
+                                transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+                                &:focus {
+                                    border-color: #007bff;
+                                    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+                                    outline: none;
+                                }
+                            }
+                        }
+                    }
+
+                    .form-checkbox {
+                        margin-bottom: get-vw(15px);
+
+                        label {
+                            font-size: get-vw(14px);
+                            color: #444;
+                            display: flex;
+                            align-items: flex-start;
+                            gap: get-vw(10px);
+
+                            input[type="checkbox"] {
+                                accent-color: #007bff;
+                                transform: scale(1.2);
+                                margin-top: get-vw(3px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

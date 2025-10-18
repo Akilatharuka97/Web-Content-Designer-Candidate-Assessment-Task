@@ -1,0 +1,116 @@
+img {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.common-heading {
+    text-align: center;
+    font-family: $noto;
+    color: $black;
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -2.5px;
+
+    span {
+        color: $blue;
+    }
+}
+
+.common-description {
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: $barlow;
+    color: $para;
+    font-weight: 400;
+    cursor: pointer;
+
+    p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 18px;
+        font-family: $barlow;
+        color: $para;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+}
+
+.common-btn {
+    display: flex;
+    align-items: center;
+    font-family: $noto;
+    font-size: 16px;
+    width: fit-content;
+    line-height: 20px;
+    text-decoration: none;
+    color: $black;
+    gap: 15px;
+    padding: 8px 20px;
+    border: 1px solid rgba($blue, 0.3);
+    border-radius: 50px;
+    z-index: 2;
+    overflow: hidden;
+
+    .btn-gif {
+        width: 25px !important;
+    }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    .common-heading {
+        text-align: left;
+        font-size: get-vw(50px);
+        line-height: get-vw(50px);
+        margin-bottom: get-vw(28px);
+        letter-spacing: get-vw(-3px);
+    }
+
+    .common-description {
+        text-align: left;
+        font-size: get-vw(20px);
+        line-height: get-vw(23px);
+
+        p {
+            text-align: left;
+            font-size: get-vw(20px);
+            line-height: get-vw(23px);
+            margin-bottom: get-vw(20px);
+        }
+    }
+
+    .common-btn {
+        font-size: get-vw(16px);
+        line-height: get-vw(20px);
+        gap: get-vw(15px);
+        padding: get-vw(8px) get-vw(20px);
+        border-radius: get-vw(50px);
+
+        .btn-gif {
+            width: get-vw(25px) !important;
+        }
+    }
+}

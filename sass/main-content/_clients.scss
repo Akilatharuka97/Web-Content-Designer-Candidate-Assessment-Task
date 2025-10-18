@@ -1,0 +1,30 @@
+.clients {
+    margin-bottom: 50px;
+
+    .wrapper {
+        .col-1 {
+            padding: 0 20px 30px;
+        }
+    }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    .clients {
+        margin-bottom: get-vw(100px);
+
+        .wrapper {
+            .col-1 {
+                padding: 0 0 get-vw(50px);
+
+                .common-heading {
+                    margin: 0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

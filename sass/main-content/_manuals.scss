@@ -1,0 +1,484 @@
+.manuals {
+    margin-bottom: 50px;
+
+    .wrapper {
+        .col-1 {
+            padding: 0 20px;
+        }
+
+        .col-2 {
+            .accordion {
+                .accc-item {
+                    margin-bottom: 30px;
+
+                    &.active {
+                        .title {
+                            color: $blue;
+
+                            img {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+
+                    .title {
+                        padding: 0 20px;
+                        font-family: $noto;
+                        font-size: 22px;
+                        line-height: 25px;
+                        font-weight: 500;
+                        color: $black;
+                        padding: 10px 20px;
+                        margin: 0 20px;
+                        background: rgba($black, 0.07);
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        img {
+                            transition: all 0.3s ease;
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    .content {
+                        display: none;
+
+                        .acc-tabs {
+                            display: flex;
+                            gap: 30px;
+                            justify-content: center;
+                            padding: 20px 30px 0;
+
+                            .tab-item {
+                                font-family: $barlow;
+                                font-size: 20px;
+                                line-height: 25px;
+                                font-weight: 500;
+                                color: $black;
+
+                                &.active {
+                                    color: $blue;
+                                    border-bottom: 1px solid $blue;
+                                }
+                            }
+                        }
+
+                        .acc-items {
+                            .pdfacc-slider {
+                                display: none;
+
+                                &.active {
+                                    display: block;
+                                }
+
+                                .owl-stage-outer {
+                                    .owl-stage {
+                                        display: flex;
+
+                                        .owl-item {
+                                            border: 1px solid rgba($black, 0.2);
+                                            border-radius: 5px;
+                                            position: relative;
+
+                                            .item {
+                                                .image {
+                                                    width: 100px;
+                                                    margin: 0 auto;
+                                                    padding-top: 50px;
+
+                                                    img {
+                                                        width: 100%;
+                                                    }
+                                                }
+
+                                                .cont {
+                                                    padding: 30px 20px 90px;
+
+                                                    .titles {
+                                                        text-align: center;
+                                                        font-size: 22px;
+                                                        line-height: 18px;
+                                                        font-family: $noto;
+                                                        color: $blue;
+                                                        font-weight: 600;
+                                                        margin-bottom: 20px;
+                                                    }
+
+                                                    .desc {
+                                                        text-align: center;
+                                                        font-size: 16px;
+                                                        line-height: 18px;
+                                                        font-family: $barlow;
+                                                        color: $para;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    .common-btn {
+                                                        position: absolute;
+                                                        left: 0;
+                                                        right: 0;
+                                                        bottom: 30px;
+                                                        margin: 0 auto;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .pdfacc-slider {
+                            padding-top: 30px;
+
+                            .owl-stage-outer {
+                                .owl-stage {
+                                    display: flex;
+
+                                    .owl-item {
+                                        border: 1px solid rgba($black, 0.2);
+                                        border-radius: 5px;
+                                        position: relative;
+
+                                        .item {
+                                            .image {
+                                                width: 100px;
+                                                margin: 0 auto;
+                                                padding-top: 50px;
+
+                                                img {
+                                                    width: 100%;
+                                                }
+                                            }
+
+                                            .cont {
+                                                padding: 30px 20px 90px;
+
+                                                .titles {
+                                                    text-align: center;
+                                                    font-size: 22px;
+                                                    line-height: 18px;
+                                                    font-family: $noto;
+                                                    color: $blue;
+                                                    font-weight: 600;
+                                                    margin-bottom: 20px;
+                                                }
+
+                                                .desc {
+                                                    text-align: center;
+                                                    font-size: 16px;
+                                                    line-height: 18px;
+                                                    font-family: $barlow;
+                                                    color: $para;
+                                                    font-weight: 400;
+                                                }
+
+                                                .common-btn {
+                                                    position: absolute;
+                                                    left: 0;
+                                                    right: 0;
+                                                    bottom: 30px;
+                                                    margin: 0 auto;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    .manuals {
+        margin-bottom: get-vw(100px);
+
+        .wrapper {
+            padding: 0 get-vw(160px);
+
+            .col-1 {
+                padding: 0 0 get-vw(50px);
+
+                .common-heading {
+                    text-align: center;
+                }
+            }
+
+            .col-2 {
+                .accordion {
+                    .accc-item {
+                        margin-bottom: get-vw(30px);
+
+                        &.active {
+                            .title {
+                                color: $blue;
+
+                                img {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+
+                        .title {
+                            cursor: pointer;
+                            padding: 0 get-vw(20px);
+                            font-family: $noto;
+                            font-size: get-vw(22px);
+                            line-height: get-vw(25px);
+                            font-weight: 500;
+                            color: $black;
+                            padding: get-vw(10px) get-vw(20px);
+                            margin: 0;
+                            background: rgba($black, 0.07);
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            img {
+                                transition: all 0.3s ease;
+                                width: get-vw(20px);
+                                height: get-vw(20px);
+                            }
+                        }
+
+                        .content {
+                            display: none;
+                            // padding: 0 get-vw(255px);
+
+                            .acc-tabs {
+                                display: flex;
+                                gap: get-vw(30px);
+                                justify-content: center;
+                                padding: get-vw(20px) get-vw(30px) 0;
+
+                                .tab-item {
+                                    font-family: $barlow;
+                                    font-size: get-vw(20px);
+                                    line-height: get-vw(25px);
+                                    font-weight: 500;
+                                    color: $black;
+                                    cursor: pointer;
+
+                                    &.active {
+                                        color: $blue;
+                                        border-bottom: 1px solid $blue;
+                                    }
+                                }
+                            }
+
+                            .acc-items {
+                                .pdfacc-slider {
+                                    display: none;
+
+                                    &.active {
+                                        display: block;
+                                    }
+
+                                    .owl-stage-outer {
+                                        .owl-stage {
+                                            display: flex;
+
+                                            .owl-item {
+                                                border: 1px solid rgba($black, 0.2);
+                                                border-radius: get-vw(5px);
+                                                position: relative;
+
+                                                .item {
+                                                    .image {
+                                                        width: get-vw(100px);
+                                                        margin: 0 auto;
+                                                        padding-top: get-vw(50px);
+
+                                                        img {
+                                                            width: 100%;
+                                                        }
+                                                    }
+
+                                                    .cont {
+                                                        padding: get-vw(30px) get-vw(20px) get-vw(90px);
+
+                                                        .titles {
+                                                            text-align: center;
+                                                            font-size: get-vw(22px);
+                                                            line-height: get-vw(18px);
+                                                            font-family: $noto;
+                                                            color: $blue;
+                                                            font-weight: 600;
+                                                            margin-bottom: get-vw(20px);
+                                                        }
+
+                                                        .desc {
+                                                            text-align: center;
+                                                            font-size: get-vw(16px);
+                                                            line-height: get-vw(18px);
+                                                            font-family: $barlow;
+                                                            color: $para;
+                                                            font-weight: 400;
+                                                        }
+
+                                                        .common-btn {
+                                                            position: absolute;
+                                                            left: 0;
+                                                            right: 0;
+                                                            bottom: get-vw(30px);
+                                                            margin: 0 auto;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .owl-nav {
+                                        display: flex;
+                                        position: absolute;
+                                        right: get-vw(-110px);
+                                        bottom: 0;
+                                        top: 0;
+                                        gap: get-vw(20px);
+                                        justify-content: center;
+                                        width: get-vw(50px);
+                                        z-index: 1;
+                                        align-content: flex-end;
+                                        flex-wrap: wrap;
+                                        flex-direction: column-reverse;
+
+                                        &.disabled {
+                                            display: none;
+                                        }
+
+                                        .owl-prev,
+                                        .owl-next {
+                                            &.disabled {
+                                                svg {
+                                                    fill: rgba($black, 0.4);
+                                                }
+                                            }
+
+                                            svg {
+                                                width: get-vw(58px);
+                                                height: get-vw(58px);
+                                                fill: $black;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .pdfacc-slider {
+                                padding-top: get-vw(30px);
+
+                                .owl-stage-outer {
+                                    .owl-stage {
+                                        display: flex;
+
+                                        .owl-item {
+                                            border: 1px solid rgba($black, 0.2);
+                                            border-radius: get-vw(5px);
+                                            position: relative;
+
+                                            .item {
+                                                .image {
+                                                    width: get-vw(100px);
+                                                    margin: 0 auto;
+                                                    padding-top: get-vw(50px);
+
+                                                    img {
+                                                        width: 100%;
+                                                    }
+                                                }
+
+                                                .cont {
+                                                    padding: get-vw(30px) get-vw(20px) get-vw(90px);
+
+                                                    .titles {
+                                                        text-align: center;
+                                                        font-size: get-vw(22px);
+                                                        line-height: get-vw(18px);
+                                                        font-family: $noto;
+                                                        color: $blue;
+                                                        font-weight: 600;
+                                                        margin-bottom: get-vw(20px);
+                                                    }
+
+                                                    .desc {
+                                                        text-align: center;
+                                                        font-size: get-vw(16px);
+                                                        line-height: get-vw(18px);
+                                                        font-family: $barlow;
+                                                        color: $para;
+                                                        font-weight: 400;
+                                                    }
+
+                                                    .common-btn {
+                                                        position: absolute;
+                                                        left: 0;
+                                                        right: 0;
+                                                        bottom: get-vw(30px);
+                                                        margin: 0 auto;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .owl-nav {
+                                    display: flex;
+                                    position: absolute;
+                                    right: get-vw(-110px);
+                                    bottom: 0;
+                                    top: 0;
+                                    gap: get-vw(20px);
+                                    justify-content: center;
+                                    width: get-vw(50px);
+                                    z-index: 1;
+                                    align-content: flex-end;
+                                    flex-wrap: wrap;
+                                    flex-direction: column-reverse;
+
+                                    .owl-prev,
+                                    .owl-next {
+                                        &.disabled {
+                                            svg {
+                                                fill: rgba($black, 0.4);
+                                            }
+                                        }
+
+                                        svg {
+                                            width: get-vw(58px);
+                                            height: get-vw(58px);
+                                            fill: $black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

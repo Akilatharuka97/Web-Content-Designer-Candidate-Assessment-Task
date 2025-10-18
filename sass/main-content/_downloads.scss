@@ -1,0 +1,150 @@
+.downloads {
+    margin-bottom: 50px;
+
+    .wrapper {
+        .col-1 {
+            padding: 0 20px 30px;
+        }
+
+        .col-2 {
+            .pdf-slider {
+                .owl-stage-outer {
+                    .owl-stage {
+                        display: flex;
+
+                        .owl-item {
+                            border: 1px solid rgba($black, 0.2);
+                            border-radius: 5px;
+                            position: relative;
+
+                            .item {
+                                .image {
+                                    width: 100px;
+                                    margin: 0 auto;
+                                    padding-top: 50px;
+
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+
+                                .cont {
+                                    padding: 30px 20px 90px;
+
+                                    .title {
+                                        text-align: center;
+                                        font-size: 22px;
+                                        line-height: 18px;
+                                        font-family: $noto;
+                                        color: $blue;
+                                        font-weight: 600;
+                                        margin-bottom: 20px;
+                                    }
+
+                                    .desc {
+                                        text-align: center;
+                                        font-size: 16px;
+                                        line-height: 18px;
+                                        font-family: $barlow;
+                                        color: $para;
+                                        font-weight: 400;
+                                    }
+
+                                    .common-btn {
+                                        position: absolute;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 30px;
+                                        margin: 0 auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    .downloads {
+        margin-bottom: get-vw(100px);
+
+        .wrapper {
+            padding: 0 get-vw(160px);
+
+            .col-1 {
+                padding: 0 0 get-vw(50px);
+
+                .common-heading {
+                    text-align: center;
+                }
+
+                .common-description {
+                    text-align: center;
+                    width: get-vw(700px);
+                    margin: 0 auto;
+                }
+            }
+
+            .col-2 {
+                padding: 0 get-vw(250px);
+
+                .pdf-slider {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: get-vw(30px);
+
+                    .item {
+                        width: calc(33.33% - get-vw(23px));
+                        position: relative;
+                        border: 1px solid rgba($black, 0.2);
+                        border-radius: get-vw(5px);
+
+                        .image {
+                            width: get-vw(100px);
+                            margin: 0 auto;
+                            padding-top: get-vw(50px);
+                        }
+
+                        .cont {
+                            padding: get-vw(30px) get-vw(20px) get-vw(90px);
+
+                            .title {
+                                text-align: center;
+                                font-size: get-vw(22px);
+                                line-height: get-vw(25px);
+                                font-family: $noto;
+                                color: $blue;
+                                font-weight: 600;
+                                margin-bottom: get-vw(20px);
+                            }
+
+                            .desc {
+                                text-align: center;
+                                font-size: get-vw(16px);
+                                line-height: get-vw(18px);
+                                font-family: $barlow;
+                                color: $para;
+                                font-weight: 400;
+                            }
+
+                            .common-btn {
+                                position: absolute;
+                                left: 0;
+                                right: 0;
+                                bottom: get-vw(30px);
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

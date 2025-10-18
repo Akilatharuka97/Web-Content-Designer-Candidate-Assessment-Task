@@ -1,0 +1,176 @@
+.arc-killer {
+    margin-bottom: 50px;
+
+    .wrapper {
+        padding: 0 20px;
+
+        .col-1 {
+
+            .common-description {
+
+                .sub-title {
+                    font-size: 18px;
+                    line-height: 20px;
+                    font-family: $barlow;
+                    color: $para;
+                    font-weight: 600;
+                }
+
+                ul {
+                    margin: 0;
+                    padding-left: 20px;
+
+                    li {
+                        text-align: left;
+                        font-size: 16px;
+                        line-height: 18px;
+                        font-family: $barlow;
+                        color: $para;
+                        font-weight: 400;
+                        list-style: none;
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            background-image: url('../assets/section-2/arr2.png');
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            width: 12px;
+                            height: 8px;
+                            left: -20px;
+                            top: 8px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .col-2 {
+            position: relative;
+            padding-top: 30px;
+
+            .play-btn-wrapper {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                margin: 0 auto;
+                z-index: 1;
+
+                .play-video {
+                    display: flex;
+                    justify-content: center;
+
+                    .icon {
+                        svg {
+                            width: 100px;
+                            height: 100px;
+                            fill: $bg;
+                        }
+                    }
+                }
+            }
+
+            .image {
+                position: relative;
+                border-radius: 5px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                    background: rgba($black, 0.3);
+                }
+
+                img {
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    .arc-killer {
+        margin-bottom: get-vw(100px);
+
+        .wrapper {
+            padding: 0 get-vw(160px);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .col-1 {
+                width: calc(100% - get-vw(900px));
+
+                .common-description {
+
+                    .sub-title {
+                        font-size: get-vw(24px);
+                        line-height: get-vw(30px);
+                        font-family: $barlow;
+                        color: $para;
+                        font-weight: 600;
+                        margin-bottom: get-vw(20px);
+                    }
+
+                    ul {
+                        margin: 0;
+                        padding-left: get-vw(20px);
+
+                        li {
+                            font-size: get-vw(20px);
+                            line-height: get-vw(23px);
+
+                            &::after {
+                                width: get-vw(12px);
+                                height: get-vw(8px);
+                                left: get-vw(-20px);
+                                top: get-vw(8px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .col-2 {
+                width: get-vw(800px);
+                padding-top: 0;
+
+                .play-btn-wrapper {
+                    .play-video {
+                        .icon {
+                            svg {
+                                width: get-vw(100px);
+                                height: get-vw(100px);
+                            }
+                        }
+                    }
+                }
+
+                .image {
+                    border-radius: get-vw(5px);
+
+                    &::after {
+                        border-radius: get-vw(5px);
+                    }
+
+                    img {
+                        border-radius: get-vw(5px);
+                    }
+                }
+            }
+        }
+    }
+}

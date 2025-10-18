@@ -1,0 +1,196 @@
+.test-video {
+    margin-bottom: 50px;
+
+    .wrapper {
+        .col-1 {
+            padding: 0 20px;
+        }
+
+        .col-2 {
+            .test-video-slider {
+                .owl-stage-outer {
+                    .owl-stage {
+                        .owl-item {
+                            .item {
+                                .top {
+                                    position: relative;
+
+                                    .play-btn-wrapper {
+                                        position: absolute;
+                                        left: 0;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        right: 0;
+                                        margin: 0 auto;
+                                        z-index: 1;
+
+                                        .play-video {
+                                            display: flex;
+                                            justify-content: center;
+
+                                            .icon {
+                                                svg {
+                                                    width: 100px;
+                                                    height: 100px;
+                                                    fill: $bg;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .image {
+                                        position: relative;
+                                        border-radius: 5px;
+
+                                        &::after {
+                                            content: '';
+                                            position: absolute;
+                                            left: 0;
+                                            bottom: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            border-radius: 5px;
+                                            background: rgba($black, 0.3);
+                                        }
+
+                                        img {
+                                            border-radius: 5px;
+                                        }
+                                    }
+                                }
+
+                                .caption {
+                                    text-align: center;
+                                    font-style: italic;
+                                    font-size: 14px;
+                                    line-height: 18px;
+                                    font-family: $barlow;
+                                    color: $para;
+                                    font-weight: 400;
+                                    padding-top: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .owl-dots {
+                    margin-top: 20px;
+                    display: flex;
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+
+                    .owl-dot {
+                        width: 15px;
+                        height: 15px;
+                        background: rgba(#7F7F7F, 0.5);
+                        border-radius: 50%;
+                        padding: 0;
+
+                        &.active {
+                            background: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    .test-video {
+        margin-bottom: get-vw(100px);
+
+        .wrapper {
+            padding: 0 get-vw(160px);
+
+            .col-1 {
+                padding: 0;
+
+                .common-heading {
+                    text-align: center;
+                    margin-bottom: get-vw(50px);
+                }
+            }
+
+            .col-2 {
+                .test-video-slider {
+                    .owl-stage-outer {
+                        .owl-stage {
+                            .owl-item {
+                                .item {
+                                    .top {
+                                        .play-btn-wrapper {
+                                            .play-video {
+                                                .icon {
+                                                    svg {
+                                                        width: get-vw(100px);
+                                                        height: get-vw(100px);
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .image {
+                                            border-radius: get-vw(5px);
+
+                                            &::after {
+                                                border-radius: get-vw(5px);
+                                            }
+
+                                            img {
+                                                border-radius: get-vw(5px);
+                                            }
+                                        }
+                                    }
+
+                                    .caption {
+                                        font-size: get-vw(16px);
+                                        line-height: get-vw(18px);
+                                        padding-top: get-vw(15px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .owl-nav {
+                        display: flex;
+                        position: absolute;
+                        right: get-vw(-110px);
+                        bottom: 0;
+                        top: 0;
+                        gap: get-vw(20px);
+                        justify-content: center;
+                        width: get-vw(50px);
+                        z-index: 1;
+                        align-content: flex-end;
+                        flex-wrap: wrap;
+                        flex-direction: column-reverse;
+
+                        .owl-prev,
+                        .owl-next {
+                            &.disabled {
+                                svg {
+                                    fill: rgba($black, 0.4);
+                                }
+                            }
+
+                            svg {
+                                width: get-vw(58px);
+                                height: get-vw(58px);
+                                fill: $black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
